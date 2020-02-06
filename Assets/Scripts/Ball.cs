@@ -36,7 +36,7 @@ public class Ball : MonoBehaviour
             Vector3 curDir = transform.TransformDirection(Vector3.forward);
             newDir = Vector3.Reflect(curDir, contactPoint.normal);
             Quaternion rotation = Quaternion.FromToRotation(Vector3.forward, newDir);
-            Debug.Log(newDir.x+"   "+ newDir.z);
+            //Debug.Log(newDir.x+"   "+ newDir.z);
             transform.rotation = rotation;
         }
     }
