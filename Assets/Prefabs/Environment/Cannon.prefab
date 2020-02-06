@@ -2710,7 +2710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4851307180628146028}
   m_LocalRotation: {x: 0, y: -0.8191521, z: 0, w: 0.57357645}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 0.313, y: -1.98, z: -0.859}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1756423634757174235}
@@ -2732,9 +2732,9 @@ Transform:
   - {fileID: 5211622047960024134}
   - {fileID: 7304335242460031559}
   - {fileID: 7118640008309219154}
+  - {fileID: 6387981458019355908}
   - {fileID: 7259600495726760535}
   - {fileID: 1459236875178725268}
-  - {fileID: 6387981458019355908}
   - {fileID: 9030538417131901966}
   - {fileID: 4548036223810952869}
   - {fileID: 6577328265059555160}
@@ -3128,7 +3128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8433016645470029183}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3693096553035408147
 MeshFilter:
@@ -3660,6 +3660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7891512731476154452}
+  - component: {fileID: 190013406}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -3682,6 +3683,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &190013406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6622619010059478527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e666bdb02f4844a85cd5fa1065ab74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 6438502670234442937, guid: 53274200c08a65d4ca351038d4872d3a, type: 3}
+  ballThrust: 10
 --- !u!1 &6973063556453090086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,11 +3802,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7034661728155371265}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8433016645470029183}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &230101012696348734
 MeshFilter:
@@ -4739,7 +4754,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8433016645470029183}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1586649982715479252
 MeshFilter:

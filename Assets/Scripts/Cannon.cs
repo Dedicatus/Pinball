@@ -20,7 +20,7 @@ public class Cannon : MonoBehaviour
 
     public void fire()
     {
-        Vector3 newDir = new Vector3(45f,0,45f);
+        Vector3 newDir = new Vector3(0f,0,0f);
         Quaternion rotation = Quaternion.FromToRotation(Vector3.forward, newDir);
         Instantiate(ball, transform.position, rotation);
         ball.GetComponent<Rigidbody>().AddForce(transform.up * ballThrust);
