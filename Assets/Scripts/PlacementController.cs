@@ -9,7 +9,7 @@ public class PlacementController : MonoBehaviour
     public GameObject prefabOK;
     public GameObject prefabFail;
 
-    public float grid = 2.0f;
+    public float grid = 1.0f;
 
     // Store which spaces are in use
     int[,] usedSpace;
