@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1215617681672443303}
   m_Layer: 0
   m_Name: Santa
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,9 +262,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3867740522675993933}
+  - component: {fileID: 69817134}
+  - component: {fileID: 69817133}
   m_Layer: 0
   m_Name: BaseCharacter
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,6 +290,33 @@ Transform:
   m_Father: {fileID: 1215617681672443303}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!136 &69817134
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153122974730547406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.5, z: 0}
+--- !u!114 &69817133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153122974730547406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2224e23eab5ad64a8ae1b9ca4d5526d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoint: 1
 --- !u!1 &3051354824480371793
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,11 +693,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 3825294075549216940}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!1 &4030227143197586393
 GameObject:
   m_ObjectHideFlags: 0
