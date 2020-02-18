@@ -362,6 +362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabPlacementObject: {fileID: 1216435090000238643, guid: 1263d24f34f3285489d1fd8cc2e00501,
     type: 3}
+  prefabDisplayObject: {fileID: 4780082431835815818, guid: e75d5b5b4ad0239458c67d6cb39ef61e,
+    type: 3}
   prefabOK: {fileID: 5394427107680313204, guid: 4dff9034b5a32f34bbfee0a643d87717,
     type: 3}
   prefabFail: {fileID: 835848185370411648, guid: 8ef659367addf534fbe90e98dbdfbb3f,
@@ -567,6 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPlacementObject: {fileID: 1216435090000238643, guid: 1263d24f34f3285489d1fd8cc2e00501,
+    type: 3}
+  prefabDisplayObject: {fileID: 4780082431835815818, guid: e75d5b5b4ad0239458c67d6cb39ef61e,
     type: 3}
   prefabOK: {fileID: 5394427107680313204, guid: 4dff9034b5a32f34bbfee0a643d87717,
     type: 3}

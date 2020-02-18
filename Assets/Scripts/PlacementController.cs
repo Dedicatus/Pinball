@@ -6,6 +6,7 @@ public class PlacementController : MonoBehaviour
 {
 
     public GameObject prefabPlacementObject;
+    public GameObject prefabDisplayObject;
     public GameObject prefabOK;
     public GameObject prefabFail;
 
@@ -69,7 +70,7 @@ public class PlacementController : MonoBehaviour
             // Create or move the object
             if (!placementObject)
             {
-                placementObject = (GameObject)Instantiate(prefabPlacementObject, point, Quaternion.identity);
+                placementObject = (GameObject)Instantiate(prefabDisplayObject, point, Quaternion.identity);
             }
             else
             {
