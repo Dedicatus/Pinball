@@ -6,25 +6,39 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int TotalHitPoint = 3;
+
     private int CurHitPoint;
 
+    private Vector3Int location;
+
     public Image HealthBar;
+
+    public PlacementController placementController;
 
     private void Start()
     {
         CurHitPoint = TotalHitPoint;
+        placementController = transform.parent.parent.GetComponent<PlacementController>();
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
             --CurHitPoint;
 
-            HealthBar.fillAmount = (float)CurHitPoint/TotalHitPoint;
+            HealthBar.fillAmount = (float) CurHitPoint / TotalHitPoint;
             if (CurHitPoint <= 0)
             {
-                Destroy(gameObject.transform.parent.gameObject);
+                Destroy(transform.parent.gameObject);
+                placementController.resetLocation(location.x, location.y);
             }
         }
+    }
+
+    public void RecordLocation(int x, int z)
+    {
+        location.x = x;
+        location.z = z;
     }
 }

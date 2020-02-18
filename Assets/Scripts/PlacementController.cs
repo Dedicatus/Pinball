@@ -88,7 +88,9 @@ public class PlacementController : MonoBehaviour
                     usedSpace[x, z] = 1;
 
                     // ToDo: place the result somewhere..
-                    Instantiate(prefabPlacementObject, point, Quaternion.identity);
+                    GameObject enemy = Instantiate(prefabPlacementObject, point, Quaternion.identity);
+                    enemy.transform.parent = gameObject.transform;
+                    enemy.transform.GetChild(0).GetComponent<Enemy>().RecordLocation(x, z);
                 }
             }
             else if (!Input.GetMouseButtonDown(0))
@@ -127,5 +129,11 @@ public class PlacementController : MonoBehaviour
         }
         point = Vector3.zero;
         return false;
+    }
+
+    public void resetLocation(int x, int z)
+    {
+        usedSpace[x, z] = 0;
+        Debug.Log("Reset Position: " + x + ", " + z);
     }
 }
