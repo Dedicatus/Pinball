@@ -23,6 +23,6 @@ public class Cannon : MonoBehaviour
         Vector3 newDir = new Vector3(0f,0,0f);
         Quaternion rotation = Quaternion.FromToRotation(Vector3.forward, newDir);
         Instantiate(ball, transform.position, rotation);
-        ball.GetComponent<Rigidbody>().AddForce(transform.up * ballThrust);
+        //ball.GetComponent<Rigidbody>().AddForce(new Vector3(0,1f,0) * ballThrust);
     }
 }

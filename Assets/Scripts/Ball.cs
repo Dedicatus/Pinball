@@ -13,6 +13,8 @@ public class Ball : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         //rigidBody.AddForce(transform.forward * thrust);
+        transform.position = new Vector3(transform.position.x, 0.16f, transform.position.z);
+        rigidBody.constraints = RigidbodyConstraints.FreezePositionY;
     }
 
     // Update is called once per frame
@@ -23,6 +25,12 @@ public class Ball : MonoBehaviour
         //rigidBody.AddForce(transform.forward * thrust);
 
         //rigidBody.velocity = new Vector3(1f,0,1f) * moveSpeed;
+        if (transform.position.y < 0.16)
+        {
+            transform.position = new Vector3(transform.position.x, 0.16f, transform.position.z);
+            rigidBody.constraints = RigidbodyConstraints.FreezePositionY;
+        }
+        
         rigidBody.MovePosition(transform.position + transform.forward * moveSpeed * Time.fixedDeltaTime);
     }
 
