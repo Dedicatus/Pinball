@@ -1253,7 +1253,7 @@ GameObject:
   - component: {fileID: 4785456370430603806}
   m_Layer: 0
   m_Name: SantaDisplay
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1558,7 +1558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2224e23eab5ad64a8ae1b9ca4d5526d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 1
+  TotalHitPoint: 3
+  HealthBar: {fileID: 0}
 --- !u!1 &7046832025815509166
 GameObject:
   m_ObjectHideFlags: 0
