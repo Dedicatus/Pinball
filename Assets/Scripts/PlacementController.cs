@@ -134,6 +134,5 @@ public class PlacementController : MonoBehaviour
     public void resetLocation(int x, int z)
     {
         usedSpace[x, z] = 0;
-        Debug.Log("Reset Position: " + x + ", " + z);
     }
 }

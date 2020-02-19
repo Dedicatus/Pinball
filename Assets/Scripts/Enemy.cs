@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
             if (CurHitPoint <= 0)
             {
                 Destroy(transform.parent.gameObject);
-                placementController.resetLocation(location.x, location.y);
+                placementController.resetLocation(location.x, location.z);
             }
         }
     }
