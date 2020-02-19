@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Tower : MonoBehaviour
 {
-    [SerializeField] private int TotalHitPoint = 3;
+    [SerializeField] private int totalHealth = 3;
 
-    private int CurHitPoint;
+    private int curHealth;
+
+    private int attack = 5;
 
     private Vector3Int location;
 
@@ -17,7 +19,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        CurHitPoint = TotalHitPoint;
+        curHealth = totalHealth;
         placementController = transform.parent.parent.GetComponent<PlacementController>();
     }
 
@@ -25,10 +27,10 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
-            --CurHitPoint;
+            --curHealth;
 
-            HealthBar.fillAmount = (float) CurHitPoint / TotalHitPoint;
-            if (CurHitPoint <= 0)
+            HealthBar.fillAmount = (float) curHealth / totalHealth;
+            if (curHealth <= 0)
             {
                 Destroy(transform.parent.gameObject);
                 placementController.resetLocation(location.x, location.z);

@@ -88,9 +88,9 @@ public class PlacementController : MonoBehaviour
                     usedSpace[x, z] = 1;
 
                     // ToDo: place the result somewhere..
-                    GameObject enemy = Instantiate(prefabPlacementObject, point, Quaternion.identity);
-                    enemy.transform.parent = gameObject.transform;
-                    enemy.transform.GetChild(0).GetComponent<Enemy>().RecordLocation(x, z);
+                    GameObject tower = Instantiate(prefabPlacementObject, point, Quaternion.identity);
+                    tower.transform.parent = gameObject.transform;
+                    tower.transform.GetChild(0).GetComponent<Tower>().RecordLocation(x, z);
                 }
             }
             else if (!Input.GetMouseButtonDown(0))
