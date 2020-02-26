@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public enum BallType { myBall, opponentBall };
+
     Rigidbody rigidBody;
 
     public float moveSpeed = 10f;
